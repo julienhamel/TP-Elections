@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>monGuiClass</class>
+ <widget class="QMainWindow" name="monGuiClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>359</width>
+    <height>605</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTextEdit" name="affichage">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>361</width>
+      <height>581</height>
+     </rect>
+    </property>
+    <property name="acceptDrops">
+     <bool>true</bool>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>359</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMenu">
+    <property name="title">
+     <string>Operations</string>
+    </property>
+    <addaction name="Inscription_Candidat69"/>
+    <addaction name="Inscription_Electeur"/>
+    <addaction name="Desinscription_Personne"/>
+    <addaction name="separator"/>
+    <addaction name="Quitter"/>
+   </widget>
+   <addaction name="menuMenu"/>
+  </widget>
+  <action name="actionInscription_Candidat">
+   <property name="text">
+    <string>Inscription Candidat</string>
+   </property>
+  </action>
+  <action name="actionInscription_lecteur">
+   <property name="text">
+    <string>Inscription Électeur</string>
+   </property>
+  </action>
+  <action name="actionD_sinscription">
+   <property name="text">
+    <string>Désinscription</string>
+   </property>
+  </action>
+  <action name="Inscription_Candidat">
+   <property name="text">
+    <string>Inscription Candidat</string>
+   </property>
+  </action>
+  <action name="Inscription_Electeur">
+   <property name="text">
+    <string>Inscription Electeur</string>
+   </property>
+  </action>
+  <action name="Desinscription_Personne">
+   <property name="text">
+    <string>Desinscription Personne</string>
+   </property>
+  </action>
+  <action name="Quitter">
+   <property name="text">
+    <string>Quitter</string>
+   </property>
+  </action>
+  <action name="Inscription_Candidat69">
+   <property name="text">
+    <string>Inscription Candidat</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>Quitter</sender>
+   <signal>triggered()</signal>
+   <receiver>monGuiClass</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Inscription_Electeur</sender>
+   <signal>triggered()</signal>
+   <receiver>monGuiClass</receiver>
+   <slot>dialogElecteur()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Inscription_Candidat69</sender>
+   <signal>triggered()</signal>
+   <receiver>monGuiClass</receiver>
+   <slot>dialogCandidat()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Desinscription_Personne</sender>
+   <signal>triggered()</signal>
+   <receiver>monGuiClass</receiver>
+   <slot>dialogdesinscrire()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>177</x>
+     <y>302</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>dialogElecteur()</slot>
+  <slot>dialogCandidat()</slot>
+  <slot>dialogdesinscrire()</slot>
+ </slots>
+</ui>
